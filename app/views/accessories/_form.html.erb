@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :item %><br>
-    <%= f.text_field :item %>
+  <div class="form-group">
+    <%= f.label :item %>
+    <%= f.text_field :item,class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :platform %><br>
-    <%= f.text_field :platform %>
+  <div class="form-group">
+    <%= f.label :platform %>
+    <%= f.text_field :platform,class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description,class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+  <div class="form-group">
+    <%= f.label :price %>
+    <%= f.text_field :price,class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :stock %><br>
-    <%= f.number_field :stock %>
+  <div class="form-group">
+    <%= f.label :stock %>
+    <%= f.number_field :stock,class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-success custom-btn access" %>
   </div>
 <% end %>
