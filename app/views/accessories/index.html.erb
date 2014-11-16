@@ -1,0 +1,35 @@
+<h1>Listing accessories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Platform</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accessories.each do |accessory| %>
+      <tr>
+        <td><%= accessory.item %></td>
+        <td><%= accessory.platform %></td>
+        <td><%= accessory.description %></td>
+        <td><%= accessory.price %></td>
+        <td><%= accessory.stock %></td>
+        <td><%= link_to 'Show', accessory %></td>
+        <td><%= link_to 'Edit', edit_accessory_path(accessory) %></td>
+        <td><%= link_to 'Destroy', accessory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Accessory', new_accessory_path %>
