@@ -11,16 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141116141018) do
+ActiveRecord::Schema.define(version: 20141121051153) do
 
   create_table "accessories", force: true do |t|
     t.string   "item"
     t.string   "platform"
     t.text     "description"
-    t.decimal  "price",       precision: 8, scale: 2
+    t.decimal  "price",               precision: 8, scale: 2
     t.integer  "stock"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "poster_file_name"
+    t.string   "poster_content_type"
+    t.integer  "poster_file_size"
+    t.datetime "poster_updated_at"
   end
 
 end

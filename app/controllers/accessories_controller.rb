@@ -1,6 +1,6 @@
 class AccessoriesController < ApplicationController
   before_action :set_accessory, only: [:show, :edit, :update, :destroy]
-
+  respond_to :html
   # GET /accessories
   # GET /accessories.json
   def index
@@ -42,7 +42,7 @@ class AccessoriesController < ApplicationController
   def update
     respond_to do |format|
       if @accessory.update(accessory_params)
-        format.html { redirect_to @accessory, notice: 'Accessory was successfully updated.' }
+        format.html { redirect_to @accessory, alert: 'Accessory was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -69,6 +69,6 @@ class AccessoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def accessory_params
-      params.require(:accessory).permit(:item, :platform, :description, :price, :stock)
+      params.require(:accessory).permit(:item, :platform, :description, :price, :stock, :poster)
     end
 end

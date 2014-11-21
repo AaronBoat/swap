@@ -1,29 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Item:</strong>
-  <%= @accessory.item %>
-</p>
-
-<p>
-  <strong>Platform:</strong>
-  <%= @accessory.platform %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @accessory.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @accessory.price %>
-</p>
-
-<p>
-  <strong>Stock:</strong>
-  <%= @accessory.stock %>
-</p>
-
-<%= link_to 'Edit', edit_accessory_path(@accessory) %> |
-<%= link_to 'Back', accessories_path %>
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+       <%= image_tag(@accessory.poster.url, class: "img-responsive")%>
+       </div>
+       <div class="col-md-9">
+         <h2><%= @accessory.item %> (<%= @accessory.platform %>)</h2>
+         <p><%= @accessory.description %></p> 
+              </div>
+        <p>Price: <span class="accessory_price"><%= @accessory.price %></span>
+        | <%= link_to 'Back', store_path %>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,31 @@
+<div class="jumbotron">
+  <div class="text-center">
+    <h2>Welcome to <span id="app">Swap</span></h2>
+    <p><strong>Buy</strong>, <strong>sell</strong> and <strong>swap</strong> your game accessories. <br> 
+    Find the latest game stations and titles in just a click.</p>
+    <p><strong>Sign up</strong> using Facebook or Twitter</p>
+    <p><%= link_to "Facebook", "#", class: "btn btn-primary btn-lg custom-btn-lg" %> <%= link_to "Twitter", "#", class: "btn btn-info btn-lg custom-btn-lg" %> <br> <span class="non-social"><strong>Don't use them?</strong> <ins><%= link_to "Sign up", "#" %></ins> with your email address.</span></p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="tpad text-capitalize">Featured Accessories</h4>
+    </div>
+  </div>
+  <div class="row">
+    <% @accessories.each do |accessory| %>
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <h1>Placeholder for image</h1>
+          </div>
+          <div class="panel-body">
+            <h4 class="text-center"><%= accessory.item %> (<%= accessory.platform %>)</h4>
+            <p><%= check_stock accessory.stock %><span class="accessory_price pull-right"><%= check_price accessory.price %></span></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div
