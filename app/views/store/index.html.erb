@@ -18,7 +18,7 @@
       <div class="col-md-3">
         <div class="panel panel-default">
           <div class="panel-heading">
-          <h1>Placeholder for image</h1>
+          <%= link_to image_tag(accessory.poster.url, class: "img-responsive"),accessory%>
           </div>
           <div class="panel-body">
             <h4 class="text-center"><%= accessory.item %> (<%= accessory.platform %>)</h4>
@@ -28,4 +28,4 @@
       </div>
     <% end %>
   </div>
-</div
+</div>

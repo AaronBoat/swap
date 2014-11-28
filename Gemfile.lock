@@ -166,8 +166,8 @@ DEPENDENCIES
   figaro
   jbuilder (~> 1.2)
   jquery-rails
-  paperclip
-  paperclip-dropbox
+  paperclip (~> 4.2)
+  paperclip-dropbox (>= 1.1.7)
   pg
   rails (= 4.0.5)
   rails_12factor

@@ -15,12 +15,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Gems for Movie Review
+# Gems for Swap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'devise'
-gem 'paperclip'
-gem 'paperclip-dropbox'
+gem "paperclip", "~> 4.2"
+gem "paperclip-dropbox", ">= 1.1.7"
 gem 'figaro'
 
 group :development do

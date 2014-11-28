@@ -19,6 +19,7 @@
   <tbody>
     <% @accessories.each do |accessory| %>
       <tr>
+       <td><%= image_tag accessory.poster.url(:medium),class: "img-responsive" %></td>
         <td><%= accessory.item %></td>
         <td><%= accessory.platform %></td>
         <td><%= accessory.description %></td>
