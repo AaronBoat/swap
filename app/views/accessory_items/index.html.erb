@@ -1,0 +1,31 @@
+<h1>Listing accessory_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Accessory</th>
+      <th>Cart</th>
+      <th>Quantity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accessory_items.each do |accessory_item| %>
+      <tr>
+        <td><%= accessory_item.accessory_id %></td>
+        <td><%= accessory_item.cart_id %></td>
+        <td><%= accessory_item.quantity %></td>
+        <td><%= link_to 'Show', accessory_item %></td>
+        <td><%= link_to 'Edit', edit_accessory_item_path(accessory_item) %></td>
+        <td><%= link_to 'Destroy', accessory_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Accessory item', new_accessory_item_path %>

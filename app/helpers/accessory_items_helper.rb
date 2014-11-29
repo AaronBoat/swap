@@ -1,0 +1,2 @@
+module AccessoryItemsHelper
+end

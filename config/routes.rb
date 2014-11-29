@@ -1,4 +1,8 @@
 Swap::Application.routes.draw do
+  resources :accessory_items
+
+  resources :carts
+
   get "store/index"
   resources :accessories
 

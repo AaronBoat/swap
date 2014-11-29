@@ -42,7 +42,7 @@ class AccessoriesController < ApplicationController
   def update
     respond_to do |format|
       if @accessory.update(accessory_params)
-        format.html { redirect_to @accessory, alert: 'Accessory was successfully updated.' }
+        format.html { redirect_to @accessory, notice: 'Accessory was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

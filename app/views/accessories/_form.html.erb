@@ -1,7 +1,8 @@
 <%= form_for(@accessory,:html => { :multipart => true}) do |f| %>
   <% if @accessory.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@accessory.errors.count, "error") %> prohibited this accessory from being saved:</h2>
+<div id="error_explanation", class="alert alert-danger alert dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>     
+     <h2><%= pluralize(@accessory.errors.count, "error") %> prohibited this accessory from being saved:</h2>
 
       <ul>
       <% @accessory.errors.full_messages.each do |msg| %>
@@ -29,7 +30,7 @@
   </div>
   <div class="form-group">
     <%= f.label :stock %>
-    <%= f.number_field :stock,class: "form-control" %>
+    <%= f.text_field :stock,class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :poster %>

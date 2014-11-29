@@ -2,7 +2,7 @@ class Accessory < ActiveRecord::Base
 	has_many :accessory_items
 	validates :item, :platform, :description, :price,  :stock, presence: true
 
-    # validates :platform, uniqueness: true
+    
 	validates :item, uniqueness: true
 	validates :stock, numericality: { only_integer: true}
 	validates :price, numericality: { greater_than_or_equal_to: 0.01}
